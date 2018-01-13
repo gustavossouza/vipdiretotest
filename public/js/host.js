@@ -82,7 +82,7 @@
 
     if (status === 'active') {
       startStopButton.classList.add('active');
-      startStopButton.innerHTML = 'End Broadcast';
+      startStopButton.innerHTML = 'Encerrar Tramissão';
       document.getElementById('urlContainer').classList.remove('hidden');
       displayUrl.innerHTML = playerUrl;
       displayUrl.setAttribute('value', playerUrl);
@@ -91,7 +91,7 @@
       }
     } else {
       startStopButton.classList.remove('active');
-      startStopButton.innerHTML = 'Broadcast Over';
+      startStopButton.innerHTML = 'Tramissão Encerrada';
       startStopButton.disabled = true;
       rtmpActive.classList.add('hidden');
     }
