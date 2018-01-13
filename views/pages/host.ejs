@@ -17,14 +17,23 @@
         </div>
     </div>
     <div class="broadcast-controls-container">
-        <button id="startStop" class="btn-broadcast hidden">Iniciar Transmissão</button>
+        <div class="rtmp-container" style="visibility:hidden">
+            <span id="rtmpLabel">Want to stream to YouTube Live or Facebook Live? Add your RTMP Server URL and Stream Name:</span>
+            <span class="hidden error" id="rtmpError">The entered RTMP server and/or stream name are not valid. Please check the url and try again.</span>
+            <span id="rtmpActive" class="hidden active">Your RTMP stream is active!</span>
+            <div id="rtmpInputContainer" class="input-container" >
+                <input id="rtmpServer" type="url" placeholder="rtmp://myrtmpserver/mybroadcastapp">
+                <input id="rtmpStream" type="text" placeholder="myStreamName">
+            </div>
+        </div>
+        <button id="startStop" class="btn-broadcast hidden">Start Broadcast</button>
         <div id="urlContainer" class="url-container hidden">
             <div id="broadcastURL" class="opacity-0 no-show"></div>
             <div id="copyURL"class="copy-link" data-clipboard-target="#broadcastURL">
-                <span>Compartilhar!</span>
+                <span>Get sharable HLS link</span>
             </div>
             <div id="copyNotice" class="tooltip copy opacity-0">
-                <span>Copiar o link!</span>
+                <span>Link copied to clipboard!</span>
                 <span class="triangle-down">▼</span>
             </div>
         </div>
