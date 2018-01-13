@@ -26,16 +26,16 @@ const broadcast = require('./services/broadcast-api');
  */
 
 app.get('/', (req, res) => {
-  res.redirect('/viewer');
+  res.redirect('/visualizar');
 });
 
-app.get('/viewer', (req, res) => {
+app.get('/visualizar', (req, res) => {
   opentok.getCredentials('viewer')
     .then(credentials => res.render('pages/viewer', { credentials: JSON.stringify(credentials) }))
     .catch(error => res.status(500).send(error));
 });
 
-app.get('/host', (req, res) => {
+app.get('/transmissao', (req, res) => {
   opentok.getCredentials('host')
     .then(credentials => res.render('pages/host', { credentials: JSON.stringify(credentials) }))
     .catch(error => res.status(500).send(error));
@@ -54,7 +54,7 @@ app.get('/broadcast', (req, res) => {
 });
 
 app.get('*', (req, res) => {
-  res.redirect('/viewer');
+  res.redirect('/visualizar');
 });
 
 /*
