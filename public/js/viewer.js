@@ -56,7 +56,7 @@
       banner.classList.add('hidden');
     } else if (status === 'ended') {
       bannerText.classList.add('red');
-      bannerText.innerHTML = 'The Broadcast is Over';
+      bannerText.innerHTML = 'A transmissão está acabada';
       banner.classList.remove('hidden');
     }
   };
