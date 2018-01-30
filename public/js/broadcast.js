@@ -24,7 +24,7 @@
       banner.classList.add('hidden');
     } else if (status === 'ended') {
       bannerText.classList.add('red');
-      bannerText.innerHTML = 'A transmissão está acabada';
+      bannerText.innerHTML = 'Transmissão Encerrada';
       banner.classList.remove('hidden');
     }
   };

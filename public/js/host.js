@@ -91,7 +91,7 @@
       }
     } else {
       startStopButton.classList.remove('active');
-      startStopButton.innerHTML = 'Tramissão Encerrada';
+      startStopButton.innerHTML = 'Transmissão Encerrada';
       startStopButton.disabled = true;
       rtmpActive.classList.add('hidden');
     }
