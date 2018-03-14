@@ -35,6 +35,12 @@ app.get('/visualizar', (req, res) => {
     .catch(error => res.status(500).send(error));
 });
 
+app.get('/session', (req, res) => {
+  opentok.getCredentials('viewer')
+    .then(credentials => res.json(credentials))
+    .catch(error => res.status(500).send(error));
+});
+
 app.get('/transmissao', (req, res) => {
   opentok.getCredentials('host')
     .then(credentials => res.render('pages/host', { credentials: JSON.stringify(credentials) }))
